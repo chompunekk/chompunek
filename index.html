@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | ชมพูเนกข์ สุวรรณโณ</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    color: #f4f8ff;
+    background: linear-gradient(135deg, #123d68, #081a30, #061323);
+}
+
+/* แถบด้านบน */
+.topbar {
+    background: white;
+    color: #13243a;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* เมนู */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 35px 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e7f2ff;
+    background: #0b2039;
+    border: 1px solid #31577e;
+    border-radius: 40px;
+    padding: 12px 20px;
+    transition: .3s;
+}
+
+nav a:hover {
+    background: #2879bd;
+}
+
+/* เนื้อหาหลัก */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.panel {
+    background: linear-gradient(120deg, #16395b, #08182b);
+    border: 1px solid rgba(112,183,255,.3);
+    border-radius: 30px;
+    padding: 35px;
+    margin-bottom: 28px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.2);
+}
+
+/* หน้าโปรไฟล์ */
+.hero {
+    text-align: center;
+    padding: 35px 25px;
+}
+
+.profile-photo {
+    width: 235px;
+    height: 285px;
+    margin: auto auto 30px;
+    border: 4px solid #69baff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 0 28px rgba(64,166,255,.5);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: #eaf4ff;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.hero p {
+    color: #a9bfd9;
+    margin-top: 8px;
+}
+
+/* สถิติ */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-top: 1px solid #31577e;
+    margin-top: 30px;
+    padding-top: 25px;
+}
+
+.stat {
+    padding: 10px;
+}
+
+.stat + .stat {
+    border-left: 1px solid #31577e;
+}
+
+.stat h2 {
+    color: #79bdff;
+    font-size: 25px;
+}
+
+.stat p {
+    font-size: 13px;
+}
+
+/* หัวข้อ */
+.section-title {
+    border-left: 5px solid #399cff;
+    padding-left: 16px;
+    color: #a9d5ff;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* ข้อมูล */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(142,187,230,.2);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: #a9bfd9;
+}
+
+.value {
+    text-align: right;
+}
+
+/* กล่องข้อมูล */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 18px;
+}
+
+.card {
+    background: rgba(15,43,72,.8);
+    border: 1px solid #31577e;
+    border-radius: 18px;
+    padding: 22px;
+}
+
+.card h3 {
+    color: #8bc7ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #d5e6f8;
+    line-height: 1.8;
+}
+
+.content {
+    color: #dceaff;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* รูปผลงาน */
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* ท้ายเว็บไซต์ */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8daecc;
+    letter-spacing: 2px;
+}
+
+/* รองรับโทรศัพท์ */
+@media(max-width:600px) {
+    nav {
+        gap: 8px;
+        padding: 20px 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 9px 13px;
+    }
+
+    .panel {
+        padding: 22px 16px;
+        border-radius: 22px;
+    }
+
+    .profile-photo {
+        width: 190px;
+        height: 235px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .stat h2 {
+        font-size: 18px;
+    }
+
+    .stat p {
+        font-size: 11px;
+    }
+
+    .info-row {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    My Portfolio | ชมพูเนกข์ สุวรรณโณ
+</div>
+
+<nav>
+    <a href="#home">หน้าหลัก</a>
+    <a href="#personal">ข้อมูลส่วนตัว</a>
+    <a href="#education">การศึกษา</a>
+    <a href="#skills">ความสามารถ</a>
+    <a href="#hobby">งานอดิเรก</a>
+    <a href="#future">เป้าหมาย</a>
+    <a href="#works">ผลงาน</a>
+</nav>
+
+<div class="container">
+
+<!-- หน้าหลัก -->
+<section class="panel hero" id="home">
+
+    <div class="profile-photo">
+    <img src="IMG_0721.jpeg" alt="รูปชมพูเนกข์">
+</div>
+
+    <h1>My Profile</h1>
+
+    <h2>นางสาวชมพูเนกข์ สุวรรณโณ</h2>
+
+    <p>นักเรียนระดับมัธยมศึกษาตอนปลาย</p>
+
+    <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2>3.37</h2>
+            <p>เกรดเฉลี่ยสะสม</p>
+        </div>
+
+        <div class="stat">
+            <h2>ผลงาน</h2>
+            <p>แฟ้มสะสมผลงาน</p>
+        </div>
+
+        <div class="stat">
+            <h2>My Future</h2>
+            <p>ความฝันในอนาคต</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ข้อมูลส่วนตัว -->
+<section class="panel" id="personal">
+
+    <h2 class="section-title">01 | ข้อมูลส่วนตัว</h2>
+
+    <div class="info-row">
+        <span class="label">ชื่อ-นามสกุล</span>
+        <span class="value">นางสาวชมพูเนกข์ สุวรรณโณ</span>
+    </div>
+
+    <div class="info-row">
+        <span class="label">ระดับการศึกษา</span>
+        <span class="value">มัธยมศึกษาปีที่ 6</span>
+    </div>
+
+    <div class="info-row">
+        <span class="label">แผนการเรียน</span>
+        <span class="value">ศิลป์ภาษา</span>
+    </div>
+
+    <div class="info-row">
+        <span class="label">โรงเรียน</span>
+        <span class="value">ทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</span>
+    </div>
+
+    <div class="info-row">
+        <span class="label">เกรดเฉลี่ย</span>
+        <span class="value">3.37</span>
+    </div>
+
+</section>
+
+<!-- การศึกษา -->
+<section class="panel" id="education">
+
+    <h2 class="section-title">02 | ประวัติการศึกษา</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>ระดับมัธยมศึกษาตอนต้น</h3>
+            <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+        </div>
+
+        <div class="card">
+            <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+            <p>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</p>
+            <p>แผนการเรียน ศิลป์ภาษา</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ความสามารถ -->
+<section class="panel" id="skills">
+
+    <h2 class="section-title">03 | ความสามารถพิเศษ</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>ภาวะความเป็นผู้นำ</h3>
+            <p>มีความกล้าแสดงออก สามารถเป็นผู้นำและรับผิดชอบงานที่ได้รับมอบหมาย</p>
+        </div>
+
+        <div class="card">
+            <h3>การทำงานเป็นทีม</h3>
+            <p>สามารถทำงานร่วมกับผู้อื่น รับฟังความคิดเห็น และช่วยเหลือเพื่อนร่วมทีม</p>
+        </div>
+
+        <div class="card">
+            <h3>การวางแผน</h3>
+            <p>มีความสนใจด้านการวางแผน การจัดระบบ และการบริหารจัดการ</p>
+        </div>
+
+        <div class="card">
+            <h3>การเรียนรู้</h3>
+            <p>พร้อมเปิดรับความรู้ใหม่ ๆ และพัฒนาตนเองอยู่เสมอ</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- งานอดิเรก -->
+<section class="panel" id="hobby">
+
+    <h2 class="section-title">04 | งานอดิเรก</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>อ่านหนังสือ</h3>
+            <p>ค้นคว้าความรู้และเพิ่มพูนประสบการณ์ใหม่ ๆ</p>
+        </div>
+
+        <div class="card">
+            <h3>ทำกิจกรรม</h3>
+            <p>เข้าร่วมกิจกรรมและทำงานร่วมกับผู้อื่น</p>
+        </div>
+
+        <div class="card">
+            <h3>ฝึกทักษะ</h3>
+            <p>พัฒนาความเป็นผู้นำและทักษะการสื่อสาร</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- เป้าหมายในอนาคต -->
+<section class="panel" id="future">
+
+    <h2 class="section-title">05 | คณะและสาขาที่สนใจ</h2>
+
+    <div class="card">
+        <h3>คณะวิทยาการจัดการ</h3>
+        <p>สาขาบริหารธุรกิจ</p>
+        <p>การจัดการโลจิสติกส์</p>
+        <br>
+        <p>เป้าหมายในการศึกษาต่อ คือ การพัฒนาความรู้ด้านการบริหาร
+        การวางแผน การจัดการคลังสินค้า และระบบการขนส่ง
+        เพื่อเตรียมความพร้อมสู่การทำงานในอนาคต</p>
+    </div>
+
+</section>
+
+<!-- แรงบันดาลใจ -->
+<section class="panel" id="inspiration">
+
+    <h2 class="section-title">06 | แรงบันดาลใจ</h2>
+
+    <p class="content">
+        ฉันเป็นคนที่มีความมุ่งมั่น ตั้งใจ และพร้อมเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ
+        ฉันมีความสนใจในด้านการบริหาร การวางแผน และการจัดการ
+        รวมถึงชื่นชอบการทำงานที่ต้องใช้ความคิดและความรับผิดชอบ
+        จึงมีความตั้งใจที่จะศึกษาต่อในสาขาการจัดการโลจิสติกส์
+        เพื่อพัฒนาความรู้และทักษะของตนเอง
+        และนำไปประยุกต์ใช้ในการประกอบอาชีพในอนาคต
+    </p>
+
+</section>
+
+<!-- ผลงาน -->
+<section class="panel" id="works">
+
+    <h2 class="section-title">07 | ผลงานและกิจกรรม</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>ผลงานและกิจกรรม</h3>
+            <p>รวบรวมผลงาน กิจกรรม และประสบการณ์ที่เคยเข้าร่วม</p>
+        </div>
+
+        <div class="card">
+            <h3>เกียรติบัตร</h3>
+            <p>รวบรวมเกียรติบัตรและใบประกาศนียบัตรต่าง ๆ</p>
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+<footer>
+    MY DREAM · MY PATH · MY FUTURE
+    <p>PORTFOLIO 2026</p>
+</footer>
+
+</body>
+</html>
