@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -15,21 +16,21 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 body {
-    background: linear-gradient(
-        135deg, #21180e, #100d0a, #050505
-    );
+    font-family: 'Kanit', sans-serif;
+    color: #f4f8ff;
+    background: linear-gradient(135deg, #123d68, #081a30, #061323);
 }
 
 /* แถบด้านบน */
 .topbar {
-    background: linear-gradient(90deg, #8d6b32, #f5dfa0, #b58a43);
-    color: #090807;
+    background: white;
+    color: #13243a;
     text-align: center;
     padding: 18px;
     font-size: 14px;
     font-weight: bold;
-}
 }
 
 /* เมนู */
@@ -38,20 +39,23 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-  nav a {
+    padding: 35px 15px;
+}
+
+nav a {
     text-decoration: none;
-    color: #f5dfa0;
-    background: linear-gradient(135deg, #21180e, #090807);
-    border: 1px solid #d6b46a;
+    color: #e7f2ff;
+    background: #0b2039;
+    border: 1px solid #31577e;
     border-radius: 40px;
     padding: 12px 20px;
     transition: .3s;
 }
+
 nav a:hover {
-    background: linear-gradient(135deg, #f5dfa0, #b58a43);
-    color: #090807;
-    transform: translateY(-3px);
+    background: #2879bd;
 }
+
 /* เนื้อหาหลัก */
 .container {
     max-width: 1100px;
@@ -60,13 +64,12 @@ nav a:hover {
 }
 
 .panel {
-    background: linear-gradient(120deg, #49351e, #16110c, #080807);
-    border: 1px solid rgba(214,180,106,.4);
+    background: linear-gradient(120deg, #16395b, #08182b);
+    border: 1px solid rgba(112,183,255,.3);
     border-radius: 30px;
     padding: 35px;
     margin-bottom: 28px;
-    box-shadow: 0 10px 35px rgba(214,180,106,.12);
-}
+    box-shadow: 0 10px 35px rgba(0,0,0,.2);
 }
 
 /* หน้าโปรไฟล์ */
@@ -78,11 +81,11 @@ nav a:hover {
 .profile-photo {
     width: 235px;
     height: 285px;
-    margin: 0 auto 30px;
-    border: 4px solid #d6b46a;
+    margin: auto auto 30px;
+    border: 4px solid #69baff;
     border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 0 28px rgba(214,180,106,.4);
+    box-shadow: 0 0 28px rgba(64,166,255,.5);
 }
 
 .profile-photo img {
@@ -94,7 +97,7 @@ nav a:hover {
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 60px;
-    color: #f5dfa0;
+    color: #eaf4ff;
     margin-bottom: 10px;
 }
 
@@ -299,12 +302,12 @@ footer {
         </div>
 
         <div class="stat">
-            <h2> ฝึกงานไปรณีย์ </h2>
-            <p>แฟ้มสะสมผลงาน</p>
+            <h2>ผลงาน</h2>
+            <p> 2 </p>
         </div>
 
         <div class="stat">
-            <h2> ศุลกากร </h2>
+            <h2>ศุลกากร</h2>
             <p>ความฝันในอนาคต</p>
         </div>
 
@@ -328,7 +331,7 @@ footer {
 
     <div class="info-row">
         <span class="label">แผนการเรียน</span>
-        <span class="value">ศิลป์ภาษาจีน</span>
+        <span class="value">ศิลป์ภาษา</span>
     </div>
 
     <div class="info-row">
@@ -404,8 +407,8 @@ footer {
     <div class="cards">
 
         <div class="card">
-            <h3>ฟังเพลง</h3>
-            <p>ผ่อนคลาย</p>
+            <h3>อ่านหนังสือ</h3>
+            <p>ค้นคว้าความรู้และเพิ่มพูนประสบการณ์ใหม่ ๆ</p>
         </div>
 
         <div class="card">
@@ -464,12 +467,12 @@ footer {
 
         <div class="card">
             <h3>ผลงานและกิจกรรม</h3>
-            <p> เเข่งวันอาเซียน , เเข่งวันสังคัม </p>
+            <p>เเข่งขันวันอาเซียน , เเข่งขันวันสังคม </p>
         </div>
 
         <div class="card">
             <h3>เกียรติบัตร</h3>
-            <p>กิจกรรมปลูกป่า , จิตอาสา ๆ</p>
+            <p>รวบรวมเกียรติบัตรและใบประกาศนียบัตรต่าง ๆ</p>
         </div>
 
     </div>
